@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\salvation\Desktop\Love Calculator\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3562612208.index
+\LoveCalculator\target\generated-sources\annotations
+C:\Users\salvation\Desktop\Love Calculator\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3913288903.index
+\LoveCalculator\src\main\java

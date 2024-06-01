@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 align="center">User Details</h1>
+	<h3 align="left">Check your Details</h3>
+
+	<h4>Your Name: ${userData.userName}</h4>
+	<h4>Your CrushName: ${userData.crushName}</h4>
+	<h4>Your Email: ${userData.emailAddress}</h4>
+	<h4>Your Age: ${userData.userAge}</h4>
+	
+	
+	<a href="${pageContext.request.contextPath}/">Edit Details</a>
+	<br>
+	<a href="result">Next</a>
+
+</body>
+</html>
