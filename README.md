@@ -74,7 +74,7 @@ Clone the Repo
  - Create table in schema name=lovetable.
  
  ### Query to generate table
- "CREATE TABLE `lovetable` (`USER_ID` int NOT NULL AUTO_INCREMENT,  `USER_NAME` varchar(45) NOT NULL, `USER_CRUSH` varchar(45) NOT NULL, `USER_AGE` int NOT NULL, `USER_EMAIL` varchar(50) NOT NULL,  `USER_RESULT` varchar(45) NOT NULL,  PRIMARY KEY (`USER_ID`)) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci'
+    "CREATE TABLE `lovetable` (`USER_ID` int NOT NULL AUTO_INCREMENT,  `USER_NAME` varchar(45) NOT NULL, `USER_CRUSH` varchar(45) NOT NULL, `USER_AGE` int NOT NULL, `USER_EMAIL` varchar(50) NOT NULL,  `USER_RESULT` varchar(45) NOT NULL,  PRIMARY KEY (`USER_ID`)) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci'
 "
 
 ## Features
