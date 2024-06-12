@@ -77,7 +77,7 @@ a.button:hover {
 
 		<div class="button-container">
 			<a href="${pageContext.request.contextPath}/" class="button">Edit Details</a>
-			<a href="result" class="button">Next</a>
+			<a href="resultSave" class="button">Next</a>
 		</div>
 	</div>
 </body>

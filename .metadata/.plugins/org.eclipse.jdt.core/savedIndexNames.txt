@@ -29,7 +29,6 @@ INDEX VERSION 1.134+C:\Users\salvation\Desktop\Love Calculator\.metadata\.plugin
 3408533979.index
 1079044248.index
 1706518168.index
-1130337565.index
 2698656337.index
 1982072313.index
 761515584.index

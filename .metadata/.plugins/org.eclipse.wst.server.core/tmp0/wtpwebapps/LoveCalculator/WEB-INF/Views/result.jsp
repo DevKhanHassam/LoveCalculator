@@ -69,6 +69,7 @@
         <p>Hi ${userName}! you are  <b> ${loveResult} </b> with ${crushName}.</p>
         <a href="sendResult" class="button">Email Result</a>
         <a href="showRecords" class="button">Show Old Records</a>
+         <a href="${pageContext.request.contextPath}/" class="button">Find Love with other</a>
     </div>
 </body>
 </html>

@@ -10,7 +10,7 @@ public class NameValidation implements ConstraintValidator<Name, String> {
 
 		if (value.length() >= 3 && value.length() <= 25) {
 			
-			if(value.trim().length()>3)
+			if(value.trim().length()>=3)
 			{
 				return true;	
 			}
