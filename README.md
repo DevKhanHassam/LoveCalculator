@@ -50,13 +50,13 @@ Clone the Repo
 
 ## Email Configuration
 
-  ### Configure email properties
-    Open the file:"Email.properties" inside /LoveCalculator/src/main/resources.
-    --- Set your email credentials ("setUsername" as your email address and "setPassword" go to google settings to generate password for   application if you face problem read below)
+   - Configure email properties
+    ### Open the file:"Email.properties" inside /LoveCalculator/src/main/resources.
+   - Set your email credentials ("setUsername" as your email address and "setPassword" go to google settings to generate password for   application if you face problem read below)
  
-  ### Generate App password
-      --- Google has changed its policy, so your email password is not the same as the application password.
-      --- Follow this below given link to generate the application-specific password.
+   - Generate App password
+      -- Google has changed its policy, so your email password is not the same as the application password.
+      -- Follow this below given link to generate the application-specific password.
     
 
 
