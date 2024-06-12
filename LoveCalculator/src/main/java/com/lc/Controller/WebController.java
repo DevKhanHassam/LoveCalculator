@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.lc.Dao.LvQuery;
+import com.lc.Dao.userData;
 import com.lc.Dto.UserData;
 import com.lc.Dto.Handler.MytextHandler;
 import com.lc.Service.EmailService;
@@ -32,6 +35,9 @@ public class WebController {
 	
 	@Autowired
 	LoveService loveService;
+	
+	@Autowired
+	LvQuery query;
 	
 
 	
@@ -61,12 +67,23 @@ public class WebController {
 	{
 		HttpSession session = request.getSession();
 		session.setMaxInactiveInterval(120);
-		session.setAttribute("userName", userDataObj.getUserName());
-		session.setAttribute("crushName", userDataObj.getCrushName());
-		session.setAttribute("userEmail", userDataObj.getEmailAddress());
-		session.setAttribute("userAge", userDataObj.getUserAge());
+		
+		String userName	 =	userDataObj.getUserName();
+		String crushName =  userDataObj.getCrushName();
+		int age          =  userDataObj.getUserAge();
+		String email     =  userDataObj.getEmailAddress();
+		
+		
+		session.setAttribute("userName",userName );
+		session.setAttribute("crushName",crushName);
+		session.setAttribute("userAge",age);
+		session.setAttribute("userEmail",email);
 		
 		String loveResult=loveService.result();
+		
+		
+		
+		
 		session.setAttribute("loveResult",loveResult);
 		
 		if(result.hasErrors())
@@ -89,13 +106,18 @@ public class WebController {
 	{
 		
 		
-//		HttpSession session = request.getSession();
-//		
-//		String result= (String) session.getAttribute("loveResult");
-//		String userName= (String) session.getAttribute("userName");
-//		String crushName= (String) session.getAttribute("crushName");
-//		String email= (String) session.getAttribute("userEmail");
+		HttpSession session = request.getSession();
 		
+		String userName= (String) session.getAttribute("userName");
+		String crushName= (String) session.getAttribute("crushName");
+		String email= (String) session.getAttribute("userEmail");
+		int age = (int)session.getAttribute("userAge");
+		String result= (String) session.getAttribute("loveResult");
+		
+		query.addUserData(userName, crushName, age, email, result);
+		List<userData> showData = query.showData(userName, email);
+		
+
 		
 		return "result";
 	}
@@ -118,6 +140,26 @@ public class WebController {
 		
 		return "sendResult";
 	}
+	
+	
+	@RequestMapping("/showRecords")
+	public String showRecords(HttpServletRequest request,Model model)
+	{
+		 HttpSession session = request.getSession();
+		 
+		 String userName= (String) session.getAttribute("userName");
+		 String email= (String) session.getAttribute("userEmail");
+		 
+		 
+		 List<userData> loveList = query.showData(userName, email);
+		 System.out.println(loveList);
+		 
+		 model.addAttribute("loveList",loveList);
+		
+		return "showRecords";
+	}
+	
+	
 	
 	
 	@InitBinder

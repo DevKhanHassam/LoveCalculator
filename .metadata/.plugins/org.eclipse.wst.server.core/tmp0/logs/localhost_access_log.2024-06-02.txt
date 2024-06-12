@@ -29,3 +29,10 @@
 0:0:0:0:0:0:0:1 - - [02/Jun/2024:00:37:57 +0200] "GET /LoveCalculator/result HTTP/1.1" 200 2055
 0:0:0:0:0:0:0:1 - - [02/Jun/2024:00:37:58 +0200] "GET /LoveCalculator/userDetails?userName=HASSAM&crushName=alina&emailAddress=hassamkhan98%40outlook.com&userAge=19 HTTP/1.1" 200 1937
 0:0:0:0:0:0:0:1 - - [02/Jun/2024:00:37:59 +0200] "GET /LoveCalculator/ HTTP/1.1" 200 2445
+127.0.0.1 - - [02/Jun/2024:18:13:23 +0200] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [02/Jun/2024:18:13:28 +0200] "GET /LoveCalculator/ HTTP/1.1" 200 2409
+0:0:0:0:0:0:0:1 - - [02/Jun/2024:18:13:28 +0200] "GET /LoveCalculator/static/Images/bg.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [02/Jun/2024:18:13:29 +0200] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [02/Jun/2024:18:13:41 +0200] "GET /LoveCalculator/userDetails?userName=hassam&crushName=fafsda&emailAddress=hassamkhan98%40outlook.com&userAge=30 HTTP/1.1" 200 1938
+0:0:0:0:0:0:0:1 - - [02/Jun/2024:18:13:51 +0200] "GET /LoveCalculator/result HTTP/1.1" 200 2056
+0:0:0:0:0:0:0:1 - - [02/Jun/2024:18:14:18 +0200] "GET /LoveCalculator/sendResult HTTP/1.1" 200 1825

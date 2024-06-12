@@ -1,0 +1,21 @@
+package com.lc.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class LvQuery implements LvQueryInterface {
+	
+	@Autowired
+	JdbcTemplate jdbc;
+	
+	public String addUserData(String uName,String cName, int uAge,String uEmail,String uResult)
+	{
+		String sql="insert into lovetable (USER_NAME,CRUSH_NAME,USER_AGE,USER_EMAIL,USER_RESULT) values (?,?,?,?,?)";
+		jdbc.update(sql,uName,cName,uAge,uEmail,uResult);
+		System.out.println("all good");
+		return null;}
+	
+
+}

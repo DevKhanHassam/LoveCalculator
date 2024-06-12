@@ -1,0 +1,8 @@
+package com.lc.Dao;
+
+public interface LvQueryInterface {
+
+	
+	
+	public String addUserData(String uName,String cName, int uAge,String uEmail,String uResult);
+}

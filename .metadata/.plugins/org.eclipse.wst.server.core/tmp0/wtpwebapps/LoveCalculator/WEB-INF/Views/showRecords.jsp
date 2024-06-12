@@ -1,0 +1,117 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('/LoveCalculator/static/Images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffc4c4;
+        font-size: 60px;
+        margin-top: 30px;
+        text-shadow: 2px 2px 4px #000;
+        position: relative;
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        margin: auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 5px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    table th, table td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #e5a8bc;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    button[type="submit"] {
+        background-color: #e5a8bc;
+        text-shadow: 2px 2px 4px #000;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #e90b54;
+    }
+</style>
+<title>Love Calculator Results</title>
+</head>
+<body>
+
+<h1>Love Calculator Results</h1>
+
+<div class="container">
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>User Name</th>
+            <th>Crush Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Result</th>   
+        </tr>
+        
+        <c:forEach var="x" items="${loveList}" varStatus="status">
+            <tr>
+                <td>${status.index + 1}</td>
+                <td>${x.USER_NAME}</td>
+                <td>${x.USER_CRUSH}</td>
+                <td>${x.USER_AGE}</td>
+                <td>${x.USER_EMAIL}</td>
+                <td>${x.USER_RESULT}</td>
+            </tr>
+        </c:forEach>
+    </table>
+
+</div>
+
+</body>
+</html>

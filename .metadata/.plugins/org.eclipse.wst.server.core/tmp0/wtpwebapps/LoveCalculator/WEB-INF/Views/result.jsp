@@ -68,6 +68,7 @@
         <h1>Love Calculator</h1>
         <p>Hi ${userName}! you are  <b> ${loveResult} </b> with ${crushName}.</p>
         <a href="sendResult" class="button">Email Result</a>
+        <a href="showRecords" class="button">Show Old Records</a>
     </div>
 </body>
 </html>

@@ -1,0 +1,13 @@
+package com.lc.Dao;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class LvQuery {
+	
+	
+	public String addUserData()
+	{return null;}
+	
+
+}
