@@ -54,7 +54,7 @@ Clone the Repo
     Open the file:"Email.properties" inside /LoveCalculator/src/main/resources.
     Set your email credentials ("setUsername" as your email address and "setPassword" go to google settings to generate password for application if you face problem read below)
  
-  ### Generate App password
+  ## Generate App password
     Google has changed its policy, so your email password is not the same as the application password.
     Follow this below given link to generate the application-specific password.
     
@@ -72,7 +72,8 @@ Clone the Repo
 ## Database Configuration
  - Create Schema name="lovecalculator".
  - Create table in schema name=lovetable.
- --Query to generate table="CREATE TABLE `lovetable` (`USER_ID` int NOT NULL AUTO_INCREMENT,  `USER_NAME` varchar(45) NOT NULL, `USER_CRUSH` varchar(45) NOT NULL, `USER_AGE` int NOT NULL, `USER_EMAIL` varchar(50) NOT NULL,  `USER_RESULT` varchar(45) NOT NULL,  PRIMARY KEY (`USER_ID`)) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci'
+ -Query to generate table
+ ### "CREATE TABLE `lovetable` (`USER_ID` int NOT NULL AUTO_INCREMENT,  `USER_NAME` varchar(45) NOT NULL, `USER_CRUSH` varchar(45) NOT NULL, `USER_AGE` int NOT NULL, `USER_EMAIL` varchar(50) NOT NULL,  `USER_RESULT` varchar(45) NOT NULL,  PRIMARY KEY (`USER_ID`)) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci'
 "
 
 ## Features
