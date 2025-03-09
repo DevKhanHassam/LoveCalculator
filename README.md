@@ -57,17 +57,7 @@ Clone the Repo
    - Generate App password
       -- Google has changed its policy, so your email password is not the same as the application password.
       -- Follow this below given link to generate the application-specific password.
-    
-
-
-
-
-
-## 🔗 Links
-
-[Video to Generate password](https://www.linkedin.com/)
-
-
+  
 
 ## Database Configuration
  - Create Schema name="lovecalculator".
